@@ -3,10 +3,83 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Mainpage.css">
     <title>LeoHud31</title>
     <link rel="icon" type="image/x-icon" href="/Assets/LeoHud31 Favicon.png">
 </head>
 <body>
-    
+    <header>
+        <h1>Welcome to my Personal portfolio</h1>
+        <h2>Leo Hudson</h2>
+        <h2>Studying Computer Science with Cyber Security
+            at the University of Huddersfield</h2>
+        </h2>
+    </header>
+    <div class="wrapper" id="cardContainer"></div>
+
+    <script>
+        const cardsData = [
+            {
+                title: "Enigma",
+                subtitle: "Python",
+                image: "Assets/Placeholder.png",
+                link: "Enigma.html"
+            },
+            {
+                title: "Race Radar",
+                subtitle: "HTML|CSS|JavaScript",
+                image: "Assets/Placeholder.png",
+                link: ""
+            },
+            {
+                title: "Password Generator",
+                subtitle: "Python",
+                image: "Assets/Placeholder.png",
+                link: ""
+            },
+            {
+                title: "Agile",
+                subtitle: "HTML|CSS",
+                image: "Assets/Placeholder.png",
+                link: ""
+            },
+            {
+                title: "Personal Portfolio",
+                subtitle: "HTML|CSS|JavaScript",
+                image: "Assets/Placeholder.png",
+                link: ""
+            },
+            
+        ];
+
+        const cardContainer = document.getElementById('cardContainer');
+
+        cardsData.forEach(card => {
+            const cardElement = `
+    <div class="card">
+        <div class="card-inner">
+            <div class="front-page">
+            <img src="${card.image}" class="card-image">
+                <div class="card-info">
+                    <h2 class="card-title">${card.title}</h2>
+                    <p class="card-subtitle">${card.subtitle}</p>
+                </div>
+            </div>
+            <div class="back-page">
+               
+                <div class="card-content">
+                    <h3>${card.title}</h3>
+                    <a href="${card.link}" class="race_type">
+                        <button class="card-button">Explore More</button></a>
+                </div>
+            </div>
+        </div>
+    </div>
+`;
+            cardContainer.innerHTML += cardElement;
+        });
+    </script>
+    </div>
+
 </body>
 </html>

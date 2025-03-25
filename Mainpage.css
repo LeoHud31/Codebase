@@ -1,0 +1,109 @@
+body{
+    background-color: #f0f0f0;
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    text-align: center;
+}
+
+.wrapper {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 20px;
+    overflow-x: auto;
+    min-height: 500px;
+}
+
+.card {
+    flex: 0 0 auto;
+    width: 270px; 
+    height: 410px; 
+    perspective: 1000px;
+}
+
+.card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d; 
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg); 
+}
+    
+
+.front-page, .back-page {
+    backface-visibility: hidden; 
+    border-radius: 15px; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+.front-page {
+    background-color: #1a1a1a;
+    color: white;
+}
+
+.back-page {
+    background-color: #383838; 
+    color: white;
+    transform: rotateY(180deg); 
+}
+
+.card-info, .card-content {
+    position: relative;
+    background: none; 
+    bottom: auto;
+    left: auto;
+    text-align: center;
+}
+.card-info {
+    position: absolute;
+    bottom: 20px;
+    left: 10px;
+    color: white;
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+}
+.card-title {
+    margin: 0;
+    font-size: 1.5rem;
+}
+.card-subtitle {
+    margin: 0;
+    font-size: 1rem;
+}
+.card-button {
+    background-color: red;
+    color: white;
+    padding: 12px 24px;
+    font-size: 1rem;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.card-image {
+    width: 100%; 
+    height: 100%;
+    object-fit: cover; 
+    border-radius: 15px;
+}
+
+title{
+    color:blue;
+}
